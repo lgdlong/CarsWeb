@@ -1,0 +1,60 @@
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.cars li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 60px;
+    margin: 5px;
+    border: #bdbdbd 2px solid;
+}
+
+.cars li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.cars li:hover {
+    background-color: #E8E8E8;
+}
+
+.cars li.selected {
+    background-color: black; /* Reverse background color */
+    color: #fff; /* Reverse text color */
+}
+
+.cars li.selected a {
+    color: #fff; /* Reverse text color */
+}
+
+.models {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the list */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.models li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 60px;
+    margin: 5px;
+    border: #bdbdbd 2px solid;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.models li:hover {
+    background-color: #E8E8E8;
+}

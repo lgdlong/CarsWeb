@@ -38,7 +38,7 @@ a {
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    padding: 50px 100px 0 10px;
+    padding: 10px 100px 0 10px;
     margin-left: 7vh;
     margin-right: 7vh;
 }
@@ -51,25 +51,34 @@ a {
     overflow: hidden;
 }
 
-#navbar a {
+#nav-menu {
+    position: relative;
     width: 50px;
-    height: 50px;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
-    color: rgb(76, 76, 76);
-    margin: 0;
-    padding: 0;
-}
-
-#navbar a:hover {
     color: rgb(0, 0, 0);
+    margin: 0 20px 0 20px;
+    border: transparent 3px solid;
+    text-decoration: none;
 }
 
 #navbar li {
-    color: rgb(76, 76, 76);
     float: left;
-    padding-left: 50px;
-    padding-right: 50px;
+}
+
+#nav-menu::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000000;
+    transition: width 0.3s ease-in-out;
+}
+
+#nav-menu:hover::before {
+    width: 100%;
 }
 
 #navbar img {
@@ -90,17 +99,16 @@ a {
 
 main {
     display: grid; /* Change to grid layout */
-    grid-template-columns: 40% 50%; /* Define columns */
-    gap: 5%; /* Add gap between columns */
-    margin-top: 150px;
-    margin-left: 7vw;
+    grid-template-columns: 35% 60%; /* Define columns */
+    gap: 2%; /* Add gap between columns */
+    margin-top: 100px;
+    margin-left: 5vw;
 }
 
 .header {
     display: flex;
     flex-direction: column;
     color: #000000;
-    justify-content: center;
 }
 
 .header h1 {
@@ -116,19 +124,19 @@ main {
 .container {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .container .card {
     padding: 20px;
     align-self: flex-end;
-    text-align: center; /* Add this line */
+    text-align: center;
     border-radius: 20px;
     box-shadow: #000000 0px 0px 10px;
 }
 
 .container .card img {
     display: block;
+    width: 50%;
     margin: 0 auto; /* Add this line */
 }
 
@@ -147,7 +155,7 @@ main {
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 .logo {
@@ -156,16 +164,10 @@ main {
 }
 
 .logo img {
-    height: 100px; /* Adjust height to make logos smaller */
+    height: 4vw; /* Adjust height to make logos smaller */
     margin-left: 50px;
     margin-right: 50px;
     object-fit: contain; /* Maintain aspect ratio */
-}
-
-footer {
-    text-align: center;
-    padding-top: 40px;
-    color: #ababab;
 }
 
 /* RESPONSIVE */
