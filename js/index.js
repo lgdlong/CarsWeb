@@ -27,9 +27,16 @@ document.querySelectorAll('.cars li').forEach(item => {
 
 document.querySelectorAll('.logo img').forEach(logo => {
     logo.addEventListener('click', () => {
-        if (logo.alt === 'Nissan') {
-            const cardImg = document.querySelector('.card img');
-            cardImg.src = './assets/nissan/nissan-gtr.jpg';
-        }
+        const cardImg = document.querySelector('.card img');
+        const imgLinks = {
+            nissan: './assets/nissan/nissan-gtr.jpg',
+            audi: './assets/audi/audi-a6.webp',
+            bmw: './assets/bmw/bmw-i7.png',
+            lexus: './assets/lexus/lexus-lx570-removebg.png',
+            maybach: './assets/mercedes/Mercedes-Maybach-S650-2020-8-removebg-preview.png',
+            mercedes: './assets/mercedes/mercedes-amg.png',
+            porsche: './assets/porsche/718-cayman-style-edition.png'
+        };
+        cardImg.src = imgLinks[logo.alt.toLowerCase()] || cardImg.src;
     });
 });
