@@ -4,6 +4,10 @@
 
 CarsWeb is a simple web page showcasing various luxury cars. The page features a navigation bar, a header section, a container displaying car details, and a footer with logos of different car brands.
 
+## Deployment
+
+The project is deployed at [https://cars-web-bay.vercel.app/](https://cars-web-bay.vercel.app/)
+
 ## Project Structure
 
 ```
